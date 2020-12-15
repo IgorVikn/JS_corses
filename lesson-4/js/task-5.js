@@ -1,13 +1,9 @@
-/*
-    4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
-       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
-       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
-           • "director" — 3000;
-           • "manager" — 1500;
-           • "programmer" — 2000;
-           • для остальных значений — 1000.
-       После выполнения функции — вывести информацию о сотрудниках.
+/* 
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.  
 */
+
 var arrayEmployees = new Array();
 // Функция добавления в массив обьектов и внесение в них данных
 function CreateMassiveEmployees(ArrayName) {
@@ -54,15 +50,40 @@ function EmployeesSalary(arr) {
 CreateMassiveEmployees(arrayEmployees); 
 // Добавляем обьектам свойство "salary" 
 EmployeesSalary(arrayEmployees); 
+// Получение критерия для сортировки
+var SortCrit = prompt("Enter criteria (name, sName, age, salary): ");
+// Сортировка массива
+arrayEmployees.sort(function(a, b) {
+    switch (SortCrit) {
+        case "name":
+            if (a["name"] > b["name"]) {
+                return 1;
+            }
+            else if (a["name"] < b["name"]) {
+                return -1;
+            } else {return 0;}
+            break;
+        case "sName":
+            if (a["sName"] > b["sName"]) {
+                return 1;
+            }
+            else if (a["sName"] < b["sName"]) {
+                return -1;
+            } else {return 0;}
+            break;
+        case "age":
+            return a["age"] - b["age"];
+            break;
+        case "salary":
+            return a["salary"] - b["salary"];
+            break;
+        default:
+            alert("None");
+    }
+});
 // Выводим содержимое массива на екран
 for (var i = 0; i < arrayEmployees.length; i++) {
     document.write ("----------Сотрудник №" + (i+1) +  "-------<br>");
     arrayEmployees[i].show();
     document.write ("Зарплата: " + arrayEmployees[i].salary + "<br>");
 }
-
-
-
-
-
- 

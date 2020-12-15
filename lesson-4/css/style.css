@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(21, 28, 85);
+    color: cornsilk;
+}
+form {
+    width: 440px;
+    margin: 100px auto;
+}
+input {
+    font-size: 16px;
+    padding: 6px;
+    color: rgb(109, 109, 109);
+    width: 100px;
+}
+
+select {
+    font-size: 16px;
+    padding: 6px;
+    color: rgb(109, 109, 109);
+    width: 60px;
+}
+
