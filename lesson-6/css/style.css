@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(75, 141, 136);
+    color: cornsilk;
+}
+span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+form {
+    width: 440px;
+    margin: 100px auto;
+}
+input {
+    font-size: 16px;
+    padding: 6px;
+    color: rgb(109, 109, 109);
+    width: 200px;
+}
+
+select {
+    font-size: 16px;
+    padding: 6px;
+    color: rgb(109, 109, 109);
+    width: 60px;
+}
+
