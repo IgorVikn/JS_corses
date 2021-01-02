@@ -33,7 +33,7 @@ let users = {
     },
     Jeff: {
         age: 32,
-        online: false
+        online: true
     },
     Sarah: {
         age: 48,
